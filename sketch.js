@@ -1,5 +1,4 @@
 const r = require("raylib");
-const geometry = require("./geometry");
 
 function setup() {
   const HEIGHT = 700;
@@ -9,18 +8,19 @@ function setup() {
 
   r.InitWindow(WIDTH, HEIGHT, TITLE);
   r.SetTargetFPS(FPS);
-  c;
+
+  return { HEIGHT, WIDTH, FPS, TITLE };
 }
 
 function running() {
   return !r.WindowShouldClose();
 }
 
-function update() {
+function update(world) {
   // change the state
 }
 
-function draw() {
+function draw(world) {
   // draw the current state
 }
 
